@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="BusterJS">
+  <template name="asaco" value="assert.alwaysCalledOn($SPY$, $OBJ$);$END$" description="assert.alwaysCalledOn" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="OBJ" expression="" defaultValue="&quot;obj&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tcm" value="if (typeof require === &quot;function&quot; &amp;&amp; typeof module !== &quot;undefined&quot;) {&#10;    var buster = require(&quot;buster&quot;);&#10;    var GLOBAL = { $VAR$: require(&quot;$VAR$&quot;) };&#10;}&#10;&#10;(function (G) {&#10;    &quot;use strict&quot;;&#10;    &#10;    var assert = buster.assert;&#10;    var refute = buster.refute;&#10;    &#10;    buster.testCase(&quot;$MESSAGE$&quot;, {&#10;        tt$END$&#10;    });&#10;}(GLOBAL));" description="testCase.mixed[tc]" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;lib&quot;" alwaysStopAt="true" />
+    <variable name="MESSAGE" expression="" defaultValue="&quot;Describe testcase&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tcb" value="(function (W) {&#10;&#9;&quot;use strict&quot;;&#10;&#10;&#9;var assert = buster.assert;&#10;&#9;var refute = buster.refute;&#10;&#10;&#9;buster.testCase(&quot;$VAR$&quot;, {&#10;&#9;&#9;tt$END$&#10;&#9;});&#10;}(window));&#10;" description="testCase.browser[tc]" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="jsQualifiedClassName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tcn" value="&quot;use strict&quot;;&#10;&#10;var buster = require(&quot;buster&quot;);&#10;var assert = buster.assert;&#10;var refute = buster.refute;&#10;&#10;var $VAR$ = require(&quot;$VAR$&quot;);&#10;&#10;buster.testCase(&quot;$MESSAGE$&quot;, {&#10;&#9;tt$END$&#10;});&#10;" description="testCase.node[tc]" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;lib&quot;" alwaysStopAt="true" />
+    <variable name="MESSAGE" expression="" defaultValue="&quot;Describe testcase&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asacw" value="assert.alwaysCalledWith($SPY$, $ARG$);$END$" description="assert.alwaysCalledWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARG" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asacwe" value="assert.alwaysCalledWithExactly($SPY$, $ARGS$);$END$" description="assert.alwaysCalledWithExactly" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asat" value="assert.alwaysThrew($SPY$, $EXCEPTION$);$END$" description="assert.alwaysThrew" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="EXCEPTION" expression="" defaultValue="&quot;exception&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascc" value="assert.callCount($SPY$, $COUNT$);$END$" description="assert.CallCount" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="COUNT" expression="" defaultValue="&quot;count&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascor" value="assert.callOrder($SPY1$, $SPY2$);$END$" description="assert.callOrder[asco]" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY1" expression="" defaultValue="&quot;spy1&quot;" alwaysStopAt="true" />
+    <variable name="SPY2" expression="" defaultValue="&quot;spy2, ....&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asc" value="assert.called($SPY$);$END$" description="assert.called" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascon" value="assert.calledOn($SPY$, $OBJ$);$END$" description="assert.calledOn[asco]" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="OBJ" expression="" defaultValue="&quot;obj&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asc1" value="assert.calledOnce($SPY$);$END$" description="assert.calledOnce" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asc1w" value="assert.calledOnceWith($SPY$, $ARG$);$END$" description="assert.calledOnceWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARG" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asc3" value="assert.calledThrice($SPY$);$END$" description="assert.calledThrice" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asc2" value="assert.calledTwice($SPY$);$END$" description="assert.calledTwice" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascw" value="assert.calledWith($SPY$, $ARGS$);$END$" description="assert.calledWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascwe" value="assert.calledWithExactly($SPY$, $ARGS$);$END$" description="assert.calledWithExactly" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ascn" value="assert.className($ELEM$, $class$);$END$" description="assert.className" toReformat="true" toShortenFQNames="true">
+    <variable name="ELEM" expression="" defaultValue="&quot;element&quot;" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asd" value="assert.defined($OBJ$);$END$" description="assert.defined" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ase" value="assert.equals($ACT$, $EXPECT$);$END$" description="assert.equals" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asx" value="assert.exception(function () {&#10;    $VAR$&#10;});$END$" description="assert.exception" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asid" value="assert.inDelta($ACT$, $EXPECT$, $DELTA$);$END$" description="assert.inDelta" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <variable name="DELTA" expression="" defaultValue="&quot;delta&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asia" value="assert.isArray($OBJ$);$END$" description="assert.isArray" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asial" value="assert.isArrayLike($ACT$);$END$" description="assert.isArrayLike" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asib" value="assert.isBoolean($OBJ$);$END$" description="assert.isBoolean" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asif" value="assert.isFunction($OBJ$);$END$" description="assert.isFunction" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asinan" value="assert.isNaN($OBJ$);$END$" description="assert.isNaN[asin]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asinull" value="assert.isNull($OBJ$);$END$" description="assert.isNull[asin]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asinum" value="assert.isNumber($OBJ$);$END$" description="assert.isNumber[asin]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asio" value="assert.isObject($OBJ$);$END$" description="assert.isObject" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asis" value="assert.isString($OBJ$);$END$" description="assert.isString" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asm" value="assert.match($ACT$, $MATCH$);$END$" description="assert.match" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="MATCH" expression="" defaultValue="&quot;matcher&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ass" value="assert.same($ACT$, $EXPECT$);$END$" description="assert.same" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="astn" value="assert.tagName($ELEM$, $TAGNAME$);$END$" description="assert.tagName" toReformat="true" toShortenFQNames="true">
+    <variable name="ELEM" expression="" defaultValue="&quot;element&quot;" alwaysStopAt="true" />
+    <variable name="TAGNAME" expression="" defaultValue="&quot;tagName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ast" value="assert.threw($SPY$, $EXCEPTION$);$END$" description="assert.threw" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="EXCEPTION" expression="" defaultValue="&quot;exception&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="asto" value="assert.typeOf($OBJ$, $EXPECT$);$END$" description="assert.typeOf" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="as" value="assert($VAR$);$END$" description="assert" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cx" value="&quot;$CONTEXT$&quot;:{&#10;    tt$END$&#10;}" description="buster.nestedContext" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTEXT" expression="" defaultValue="&quot;context&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="su" value="setup: function () {&#10;    $END$&#10;}" description="buster.setUp" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="td" value="tearDown: function () {&#10;    $END$&#10;}" description="buster.tearDown" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tt" value="&quot;should $VAR$&quot;: function () {&#10;    $END$&#10;}" description="buster.test" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;do stuff&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reaco" value="refute.alwaysCalledOn($SPY$, $OBJ$);$END$" description="refute.alwaysCalledOn" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="OBJ" expression="" defaultValue="&quot;obj&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reacw" value="refute.alwaysCalledWith($SPY$, $ARG$);$END$" description="refute.alwaysCalledWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARG" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reacwe" value="refute.alwaysCalledWithExactly($SPY$, $ARGS$);$END$" description="refute.alwaysCalledWithExactly" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reat" value="refute.alwaysThrew($SPY$, $EXCEPTION$);$END$" description="refute.alwaysThrew" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="EXCEPTION" expression="" defaultValue="&quot;exception&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recc" value="refute.callCount($SPY$, $COUNT$);$END$" description="refute.CallCount" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="COUNT" expression="" defaultValue="&quot;count&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recor" value="refute.callOrder($SPY1$, $SPY2$);$END$" description="refute.callOrder[reco]" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY1" expression="" defaultValue="&quot;spy1&quot;" alwaysStopAt="true" />
+    <variable name="SPY2" expression="" defaultValue="&quot;spy2, ....&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rec" value="refute.called($SPY$);$END$" description="refute.called" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recon" value="refute.calledOn($SPY$, $OBJ$);$END$" description="refute.calledOn[reco]" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="OBJ" expression="" defaultValue="&quot;obj&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rec1" value="refute.calledOnce($SPY$);$END$" description="refute.calledOnce" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rec1w" value="refute.calledOnceWith($SPY$, $ARG$);$END$" description="refute.calledOnceWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARG" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rec3" value="refute.calledThrice($SPY$);$END$" description="refute.calledThrice" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rec2" value="refute.calledTwice($SPY$);$END$" description="refute.calledTwice" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recw" value="refute.calledWith($SPY$, $ARGS$);$END$" description="refute.calledWith" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recwe" value="refute.calledWithExactly($SPY$, $ARGS$);$END$" description="refute.calledWithExactly" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="&quot;arguments&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="recn" value="refute.className($ELEM$, $class$);$END$" description="refute.className" toReformat="true" toShortenFQNames="true">
+    <variable name="ELEM" expression="" defaultValue="&quot;element&quot;" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="red" value="refute.defined($OBJ$);$END$" description="refute.defined" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ree" value="refute.equals($ACT$, $EXPECT$);$END$" description="refute.equals" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rex" value="refute.exception(function () {&#10;    $VAR$&#10;});$END$" description="refute.exception" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reid" value="refute.inDelta($ACT$, $EXPECT$, $DELTA$);$END$" description="refute.inDelta" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <variable name="DELTA" expression="" defaultValue="&quot;delta&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reia" value="refute.isArray($OBJ$);$END$" description="refute.isArray" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reial" value="refute.isArrayLike($ACT$);$END$" description="refute.isArrayLike" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reib" value="refute.isBoolean($OBJ$);$END$" description="refute.isBoolean" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reif" value="refute.isFunction($OBJ$);$END$" description="refute.isFunction" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reinan" value="refute.isNaN($OBJ$);$END$" description="refute.isNaN[rein]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reinull" value="refute.isNull($OBJ$);$END$" description="refute.isNull[rein]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reinum" value="refute.isNumber($OBJ$);$END$" description="refute.isNumber[rein]" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reio" value="refute.isObject($OBJ$);$END$" description="refute.isObject" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reis" value="refute.isString($OBJ$);$END$" description="refute.isString" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rem" value="refute.match($ACT$, $MATCH$);$END$" description="refute.match" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="MATCH" expression="" defaultValue="&quot;matcher&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="res" value="refute.same($ACT$, $EXPECT$);$END$" description="refute.same" toReformat="true" toShortenFQNames="true">
+    <variable name="ACT" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="retn" value="refute.tagName($ELEM$, $TAGNAME$);$END$" description="refute.tagName" toReformat="true" toShortenFQNames="true">
+    <variable name="ELEM" expression="" defaultValue="&quot;element&quot;" alwaysStopAt="true" />
+    <variable name="TAGNAME" expression="" defaultValue="&quot;tagName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ret" value="refute.threw($SPY$, $EXCEPTION$);$END$" description="refute.threw" toReformat="true" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="&quot;spy&quot;" alwaysStopAt="true" />
+    <variable name="EXCEPTION" expression="" defaultValue="&quot;exception&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reto" value="refute.typeOf($OBJ$, $EXPECT$);$END$" description="refute.typeOf" toReformat="true" toShortenFQNames="true">
+    <variable name="OBJ" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <variable name="EXPECT" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="re" value="refute($VAR$);$END$" description="refute" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
